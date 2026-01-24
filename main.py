@@ -1,29 +1,9 @@
 # coding=utf-8
 import argparse
-import os
 from pathlib import Path
-import matplotlib.pyplot as plt
-import sys
-import matplotlib as mpl
+
 import os, sys, random
-import numpy as np
-import pandas as pd
-import torch
-import matplotlib.pyplot as plt
-from scipy.signal import periodogram
-from scipy.stats import linregress, kurtosis
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
 
-from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
-from sklearn.neighbors import KNeighborsClassifier
-
-import seaborn as sns
-from ptflops import get_model_complexity_info
-
-from utils.tools import test_params_flop, calculate_inference_time, track_max_memory, \
-    visual, plot_uncertainty_patch, plot_selector_pre_post_publication
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # main root directory
