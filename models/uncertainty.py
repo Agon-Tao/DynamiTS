@@ -58,7 +58,7 @@ class EnhancedUncertaintyPatch(nn.Module):
 
         sampled = F.grid_sample(x, grid, align_corners=True)  # [B*C, 1, 1, N*D]
 
-        patch = sampled.reshape(B, C, N, D)  # ✅ reshape 安全处理 stride
+        patch = sampled.reshape(B, C, N, D)  # ✅ reshape 
         return patch
 
     def forward(self, x):  # x: [B, C, L]
