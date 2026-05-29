@@ -278,7 +278,7 @@ Our model is built on three key ideas:
 </p>
 
 <p align="center">
-  <img src="./assets/structal intensity.png" width="900" alt="Model Architecture">
+  <img src="./assets/structal intensity_01.png" width="900" alt="Model Architecture">
 </p>
 
 ---
