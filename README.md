@@ -1,17 +1,13 @@
 # DynamiTS 
- A structure-guided framework with adaptive fusion, dynamic patching, and routing.
- 
- The parameter files and the main file will be released after the paper is accepted.
-
-
-# YourModelName
 
 <p align="center">
   <img src="./figures/overview.png" width="750">
 </p>
 
 <p align="center">
-  <b>A concise and powerful model for long-term time series forecasting.</b>
+  <b> A Structure-Guided Framework for Multivariate Time
+Series Forecasting via Adaptive Multi-Scale Fusion and Dynamic
+Patch Expansion.</b>
 </p>
 
 <p align="center">
