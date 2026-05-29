@@ -245,14 +245,14 @@ This repository provides the official implementation of **DynamiTS**, a deep lea
 
 ## ✨ Overview
 
-**YourModelName** is a deep learning framework designed for **long-term time series forecasting**.  
+**DynamiTS** is a deep learning framework designed for **long-term time series forecasting**.  
 It introduces an adaptive multi-scale modeling strategy to capture both short-term fluctuations and long-term temporal dependencies.
 
 Our model is built on three key ideas:
 
-- **Multi-scale temporal representation** for modeling complex patterns.
-- **Adaptive selector weights** for dynamically choosing useful temporal scales.
-- **Efficient forecasting head** for stable and accurate prediction.
+- **Adaptive Multi-Scale Fusion** for dynamically aggregating multi-resolution temporal representations..
+- **Structure-Guided Dynamic Patch Expansion** for preserving local structural continuity through adaptive patch boundary adjustment..
+- **Temporal-Aware DLinear Mixture of Experts** for capturing variable-specific temporal dynamics with expert routing..
 
 <p align="center">
   <img src="./figures/overview.png" width="850">
