@@ -293,7 +293,7 @@ Performs well across multiple forecasting horizons and benchmark datasets.
 ## 🏗 Architecture
 
 <p align="center">
-  <img src="./Model.png" width="900">
+  <img src="Model.png" width="900" alt="Model Architecture">
 </p>
 
 The overall architecture consists of:
