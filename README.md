@@ -293,7 +293,7 @@ Performs well across multiple forecasting horizons and benchmark datasets.
 ## 🏗 Architecture
 
 <p align="center">
-  <img src="./figures/architecture.png" width="900">
+  <img src="./Modele.png" width="900">
 </p>
 
 The overall architecture consists of:
@@ -334,7 +334,7 @@ The overall architecture consists of:
 ## 📈 Visualization
 
 <p align="center">
-  <img src="./figures/prediction_curve.png" width="850">
+  <img src="./Model.png" width="850">
 </p>
 
 The visualization compares the predicted sequence with the ground-truth sequence on the test set.
