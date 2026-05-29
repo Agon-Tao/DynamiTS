@@ -319,6 +319,9 @@ Performs well across multiple forecasting horizons and benchmark datasets.
   <img src="./assets/Model.png" width="900" alt="Model Architecture">
 </p>
 
+  **Figure 1**. Structure-Guided Dynamic Patch Expansion (SDPE).</em>
+
+
 The overall architecture consists of:
 
 1. **Input Embedding**  
@@ -342,22 +345,16 @@ The overall architecture consists of:
   <img src="./assets/results.png" width="850">
 </p>
 
----
 
-## 📈 Visualization
 
-<p align="center">
-  <img src="./assets/Model.png" width="850">
-</p>
-
-The visualization compares the predicted sequence with the ground-truth sequence on the test set.
 
 ---
+
 
 ## 🧪 Selector Weight Analysis
 
 <p align="center">
-  <img src="./figures/selector_weights.png" width="850">
+  <img src="./figures/Weather_512_to_192.png" width="850">
 </p>
 
 The learned selector weights reveal how the model adaptively focuses on different temporal scales for each input sample.
@@ -430,52 +427,8 @@ YourProject/
     ├── prediction_curve.png
     └── selector_weights.png
 ```
-
 ---
 
-## 🧩 Checkpoints
-
-The best checkpoint is saved automatically according to the validation loss.
-
-```text
-checkpoints/
-└── Traffic_512_192_YourModelName/
-    └── checkpoint.pth
-```
-
-During testing, the model loads:
-
-```python
-model.load_state_dict(torch.load(best_model_path))
-```
-
----
-
-## 📌 To-do List
-
-- [x] Release training and testing code
-- [x] Support Traffic dataset
-- [x] Add visualization scripts
-- [ ] Release pretrained checkpoints
-- [ ] Add more benchmark datasets
-- [ ] Add ablation study results
-
----
-
-## 📝 Citation
-
-If you find this repository helpful, please cite our work:
-
-```bibtex
-@article{yourmodel2026,
-  title={YourModelName: A Multi-scale Adaptive Framework for Long-term Time Series Forecasting},
-  author={Your Name and Coauthor Name},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2026}
-}
-```
-
----
 
 ## 🙏 Acknowledgement
 
