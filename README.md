@@ -1,9 +1,6 @@
 # 🌌 DynamiTS 
 
 ### DynamiTS: A Structure-Guided Framework for Multivariate Time Series Forecasting via Adaptive Multi-Scale Fusion and Dynamic Patch Expansion
-<p align="center">
-  <img src="./figures/banner.png" width="900">
-</p>
 
 <p align="center">
   <b>Adaptive Scale Selection · Long-term Forecasting · Mixture-of-Experts · Robust Temporal Modeling</b>
@@ -27,6 +24,38 @@
 </div>
 
 ---
+
+## 🔥 Highlights
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 🧠 Adaptive Multi-Scale Fusion
+ Dynamically aggregate multi-resolution temporal representations.
+
+</td>
+<td width="33%" align="center">
+
+### ⚡ Structure-Guided Dynamic Patch Expansion
+
+Preserve local structural continuity through adaptive patch boundary adjustment
+
+</td>
+<td width="33%" align="center">
+
+### 📈 Temporal-Aware DLinear Mixture of Experts
+
+Capture variable-specific temporal dynamics with expert routing
+
+</td>
+</tr>
+</table>
+
+---
+
+
+
 ## 📌 Introduction
 
 This repository provides the official implementation of **DynamiTS**, a deep learning model for long-term time series forecasting.
@@ -40,74 +69,27 @@ It introduces an adaptive multi-scale modeling strategy to capture both short-te
 
 Our model is built on three key ideas:
 
-- **Adaptive Multi-Scale Fusion** for dynamically aggregating multi-resolution temporal representations..
-- **Structure-Guided Dynamic Patch Expansion** for preserving local structural continuity through adaptive patch boundary adjustment..
-- **Temporal-Aware DLinear Mixture of Experts** for capturing variable-specific temporal dynamics with expert routing..
+- **Adaptive Multi-Scale Fusion** for dynamically aggregating multi-resolution temporal representations.
+- **Structure-Guided Dynamic Patch Expansion** for preserving local structural continuity through adaptive patch boundary adjustment.
+- **Temporal-Aware DLinear Mixture of Experts** for capturing variable-specific temporal dynamics with expert routing.
+
+<p align="center">
+  <img src="./assets/structal_intensity_01.png" width="900" alt="Model Architecture">
+</p>
 
 <p align="center">
   <img src="./assets/dynamic patch_01.png" width="900" alt="Model Architecture">
 </p>
 
-<p align="center">
-  <img src="./assets/structal intensity_01.png" width="900" alt="Model Architecture">
-</p>
 
----
 
-## 🔥 Highlights
 
-<table>
-<tr>
-<td width="33%" align="center">
-
-### 🧠 Adaptive Scale Selection
-
-Learns dynamic weights for different temporal scales instead of relying on fixed receptive fields.
-
-</td>
-<td width="33%" align="center">
-
-### ⚡ Efficient Forecasting
-
-Achieves competitive performance with a lightweight and easy-to-train architecture.
-
-</td>
-<td width="33%" align="center">
-
-### 📈 Strong Generalization
-
-Performs well across multiple forecasting horizons and benchmark datasets.
-
-</td>
-</tr>
-</table>
-
----
 
 ## 🏗 Architecture
 
 <p align="center">
   <img src="./assets/Model.png" width="900" alt="Model Architecture">
 </p>
-
-  **Figure 1**. Structure-Guided Dynamic Patch Expansion (SDPE).</em>
-
-
-The overall architecture consists of:
-
-1. **Input Embedding**  
-   Converts raw time series into latent temporal representations.
-
-2. **Multi-scale Mixing Module**  
-   Extracts temporal patterns from different scales.
-
-3. **Adaptive Selector**  
-   Learns sample-wise scale importance weights.
-
-4. **Prediction Head**  
-   Generates future forecasting results.
-
----
 
 ## 📊 Main Results
 
@@ -162,18 +144,6 @@ python run.py \
   --learning_rate 0.0001
 ```
 
-### Test with checkpoint
-
-```bash
-python run.py \
-  --is_training 0 \
-  --model YourModelName \
-  --data Traffic \
-  --seq_len 512 \
-  --pred_len 192
-```
-
----
 
 ## 📁 Project Structure
 
