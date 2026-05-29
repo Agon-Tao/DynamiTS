@@ -208,6 +208,25 @@ your_email@example.com
 
 <div align="center">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🌌 DynamiTS 
 
 ### DynamiTS: A Structure-Guided Framework for Multivariate Time Series Forecasting via Adaptive Multi-Scale Fusion and Dynamic Patch Expansion
@@ -255,7 +274,11 @@ Our model is built on three key ideas:
 - **Temporal-Aware DLinear Mixture of Experts** for capturing variable-specific temporal dynamics with expert routing..
 
 <p align="center">
-  <img src="./figures/overview.png" width="850">
+  <img src="./assets/dynamic patch.png" width="900" alt="Model Architecture">
+</p>
+
+<p align="center">
+  <img src="./assets/structal intensity.png" width="900" alt="Model Architecture">
 </p>
 
 ---
@@ -293,7 +316,7 @@ Performs well across multiple forecasting horizons and benchmark datasets.
 ## 🏗 Architecture
 
 <p align="center">
-  <img src="Model.png" width="900" alt="Model Architecture">
+  <img src="./assets/Model.png" width="900" alt="Model Architecture">
 </p>
 
 The overall architecture consists of:
@@ -315,18 +338,8 @@ The overall architecture consists of:
 ## 📊 Main Results
 
 ### Main Forecasting Results
-
-| Dataset | Prediction Length | MSE ↓ | MAE ↓ | RMSE ↓ | MAPE ↓ | RSE ↓ |
-|:---:|:---:|---:|---:|---:|---:|---:|
-| Traffic | 96  | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Traffic | 192 | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Traffic | 336 | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Traffic | 720 | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Weather | 96  | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Weather | 192 | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-
 <p align="center">
-  <img src="./figures/results.png" width="850">
+  <img src="./assets/results.png" width="850">
 </p>
 
 ---
@@ -334,7 +347,7 @@ The overall architecture consists of:
 ## 📈 Visualization
 
 <p align="center">
-  <img src="./Model.png" width="850">
+  <img src="./assets/Model.png" width="850">
 </p>
 
 The visualization compares the predicted sequence with the ground-truth sequence on the test set.
