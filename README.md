@@ -12,21 +12,17 @@
   <img src="https://img.shields.io/badge/Task-Time%20Series%20Forecasting-00A67E?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-FCC624?style=for-the-badge">
 </p>
-
 <p align="center">
-  <a href="#-overview">Overview</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-results">Results</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-citation">Citation</a>
+  <a href="#overview">Overview</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#main-results">Results</a> •
+  <a href="#dataset-links">Dataset Links</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#project-structure">Project Structure</a> •
+  <a href="#contact">Contact</a>
 </p>
 
-</div>
-
----
-
 ## 🔥 Highlights
-
 <table>
 <tr>
 <td width="33%" align="center">
@@ -52,17 +48,13 @@ Capture variable-specific temporal dynamics with expert routing
 </tr>
 </table>
 
----
-
-
 
 ## 📌 Introduction
 
 This repository provides the official implementation of **DynamiTS**, a deep learning model for long-term time series forecasting.
 
 
-
-## ✨ Overview
+<h2 id="overview" name="overview">✨ Overview</h2>
 
 **DynamiTS** is a deep learning framework designed for **long-term time series forecasting**.  
 It introduces an adaptive multi-scale modeling strategy to capture both short-term fluctuations and long-term temporal dependencies.
@@ -83,23 +75,19 @@ Our model is built on three key ideas:
 
 
 
-
-
-## 🏗 Architecture
+<h2 id="architecture" name="architecture">🏗 Architecture</h2>
 
 <p align="center">
   <img src="./assets/Model.png" width="900" alt="Model Architecture">
 </p>
 
-## 📊 Main Results
+
+<h2 id="main-results" name="main-results">📊 Main Results</h2>
 
 ### Main Forecasting Results
 <p align="center">
   <img src="./assets/results.png" width="850">
 </p>
-
-
-
 
 ---
 
@@ -119,12 +107,43 @@ The learned selector weights reveal how the model adaptively focuses on differen
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
-## 🚀 Usage
+<h2 id="dataset-links" name="dataset-links">📦 Dataset Links</h2>
 
-### Train and evaluate on Traffic
+The datasets used in this project can be downloaded from the following sources:
+
+| Dataset | Source |
+|---|---|
+| ETT  | [ETDataset](https://github.com/zhouhaoyi/ETDataset) |
+| Weather | [Weather Long-term Time Series Forecasting](https://www.kaggle.com/datasets/alistairking/weather-long-term-time-series-forecasting) |
+| Traffic | [Traffic Hourly Dataset](https://hf-mirror.com/datasets/LeoTungAnh/traffic_hourly) |
+| Exchange Rate | [Multivariate Time Series Data](https://github.com/laiguokun/multivariate-time-series-data) |
+| Electricity | [UCI ECL Load Diagrams 2011-2014](https://archive.ics.uci.edu/ml/datasets/ECLLoadDiagrams20112014) |
+| PEMS | [Caltrans Performance Measurement System](https://pems.dot.ca.gov) |
+| METR-LA | [METR-LA Dataset](https://github.com/liyaguang/DCRNN) |
+| Power | [Wind Solar Electricity Production](https://www.kaggle.com/datasets/henriupton/wind-solar-electricity-production) |
+
+Please place the downloaded datasets under the `./data/` directory and make sure the file paths are consistent with the provided scripts.
+
+Example data structure:
+
+```text
+data/
+├── ETTh1.csv
+├── ETTh2.csv
+├── ETTm1.csv
+├── ETTm2.csv
+├── weather.csv
+├── electricity.csv
+├── exchange_rate.csv
+└── traffic/
+    └── traffic.csv
+```
+
+<h2 id="usage" name="usage">🚀 Usage</h2>
+
+### Train and evaluate on Dataset
 ```bash
 bash ./scripts/ETTh1/ETTh1.sh
 bash ./scripts/ETTh2/ETTh2.sh
@@ -133,29 +152,56 @@ bash ./scripts/ETTm2/ETTm2.sh
 bash ./scripts/ECL/ECL.sh
 bash ./scripts/Traffic/Traffic.sh
 bash ./scripts/Weather/Weather.sh
+```
 
-## 📁 Project Structure
+
+<h2 id="project-structure" name="project-structure">📁 Project Structure</h2>
 
 ```text
-YourProject/
+DynamiTS-main/
 ├── README.md
 ├── requirements.txt
-├── run.py
-├── models/
-│   └── YourModelName.py
-├── layers/
-├── scripts/
-│   └── Traffic/
-│       └── your_model.sh
+├── main.py
+├── LICENSE
+├── .gitignore
+│
+├── assets/
+│   └── figures and visualization images
+│
 ├── checkpoints/
-├── test_results/
-└── figures/
-    ├── banner.png
-    ├── overview.png
-    ├── architecture.png
-    ├── results.png
-    ├── prediction_curve.png
-    └── selector_weights.png
+│   └── saved model checkpoints
+│
+├── models/
+│   ├── __init__.py
+│   ├── Amsf.py
+│   ├── Common.py
+│   ├── Dmoe.py
+│   ├── DynamiTS.py
+│   └── Uncertainty.py
+│
+├── scripts/
+│   ├── ECL/
+│   │   └── ECL.sh
+│   ├── ETTh1/
+│   │   └── ETTh1.sh
+│   ├── ETTh2/
+│   │   └── ETTh2.sh
+│   ├── ETTm1/
+│   │   └── ETTm1.sh
+│   ├── ETTm2/
+│   │   └── ETTm2.sh
+│   ├── Exchange/
+│   │   └── Exchange.sh
+│   ├── Traffic/
+│   │   └── Traffic.sh
+│   └── Weather/
+│       └── Weather.sh
+│
+└── utils/
+    ├── __init__.py
+    ├── dataloader.py
+    ├── general.py
+    └── tools.py
 ```
 ---
 
@@ -171,10 +217,9 @@ This project is inspired by the following excellent repositories:
 - Informer
 ---
 
-## 📬 Contact
+<h2 id="contact" name="contact">📬 Contact</h2>
 
 For questions or suggestions, please contact:
-
 ```text
 sunyujuan@ldu.edu.cn
 ```
