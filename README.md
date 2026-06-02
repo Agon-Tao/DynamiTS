@@ -179,7 +179,7 @@ This project is inspired by the following excellent repositories:
 For questions or suggestions, please contact:
 
 ```text
-your_email@example.com
+sunyujuan@ldu.edu.cn
 ```
 
 ---
