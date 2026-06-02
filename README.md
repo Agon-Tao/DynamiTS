@@ -127,10 +127,14 @@ pip install -r requirements.txt
 ## 🚀 Usage
 
 ### Train and evaluate on Traffic
-
 ```bash
-bash ./scripts/Traffic/your_model.sh
-```
+bash ./scripts/ETTh1/ETTh1.sh
+bash ./scripts/ETTh2/ETTh2.sh
+bash ./scripts/ETTm1/ETTm1.sh
+bash ./scripts/ETTm2/ETTm2.sh
+bash ./scripts/ECL/ECL.sh
+bash ./scripts/Traffic/Traffic.sh
+bash ./scripts/Weather/Weather.sh
 
 ## 📁 Project Structure
 
