@@ -1,4 +1,3 @@
-
 import torch
 import torch.nn as nn
 class TemporalRouting(nn.Module):
@@ -71,18 +70,15 @@ class DLinearExpert(nn.Module):
         return pred_trend + pred_seasonal
 
 
-class DynamiTS(nn.Module):
+class Dynami(nn.Module):
     def __init__(self, input_shape, pred_len, ff_dim=2048, dropout=0.2, loss_coef=1.0, num_experts=4, top_k=2):
-        super(DynamiTS, self).__init__()
+        super(Dynami, self).__init__()
         # input_shape[0] = seq_len    input_shape[1] = feature_num
         self.num_experts = num_experts
         self.top_k = top_k
         self.pred_len = pred_len
 
         self.gating = TemporalRouting(input_shape[0], num_experts, top_k)
-
-        # self.experts = nn.ModuleList(
-        #     [DLinearExpert(input_shape[0], pred_len, hidden_dim=ff_dim, dropout=dropout) for _ in range(num_experts)])
 
         self.experts = nn.ModuleList(
             [DLinearExpert(input_shape[0], pred_len, dropout) for _ in range(num_experts)]

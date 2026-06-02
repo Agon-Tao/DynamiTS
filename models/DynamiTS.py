@@ -1,15 +1,15 @@
 import torch
 import torch.nn as nn
-from models.common import RevIN
-from models.uncertainty import  EnhancedUncertaintyPatch
-from models.Dmoe import DynamiTS
-from models.amsf import AMSF
+from models.Common import RevIN
+from models.Uncertainty import  EnhancedUncertaintyPatch
+from models.Dmoe import Dynami
+from models.Amsf import AMSF
 
 
-class Dynami(nn.Module):
+class DynamiTS(nn.Module):
     """Implementation of Dynami."""
-    def __init__(self, input_shape, pred_len, n_block, dropout, patch,k,c, target_slice, norm=True, channel_wise=False):
-        super(Dynami, self).__init__()
+    def __init__(self, input_shape, pred_len, n_block, dropout, patch,k,c, alpha,target_slice, norm=True, channel_wise=False):
+        super(DynamiTS, self).__init__()
         # print("✅ Using correct DynamiTS class with channel_wise =", channel_wise)
         self.target_slice = target_slice
         self.norm = norm
@@ -35,7 +35,7 @@ class Dynami(nn.Module):
         )for _ in range(n_block)])
 
         self.reconstruct_linear = nn.Linear(self.patch_num * self.D, self.input_len)
-        self.moe =DynamiTS(input_shape, pred_len,  dropout=dropout, num_experts=8, top_k=1)
+        self.moe =Dynami(input_shape, pred_len,  dropout=dropout, num_experts=8, top_k=1)
 
     def forward(self, x):
         # [batch_size, seq_len, feature_num]
