@@ -32,7 +32,7 @@
 <td width="33%" align="center">
 
 ### 🧠 Adaptive Multi-Scale Fusion
- Dynamically aggregate multi-resolution temporal representations.
+Adaptively aggregate multi-resolution temporal representations.
 
 </td>
 <td width="33%" align="center">
@@ -131,19 +131,6 @@ pip install -r requirements.txt
 ```bash
 bash ./scripts/Traffic/your_model.sh
 ```
-
-### Run manually
-
-```bash
-python run.py \
-  --model YourModelName \
-  --data Traffic \
-  --seq_len 512 \
-  --pred_len 192 \
-  --batch_size 32 \
-  --learning_rate 0.0001
-```
-
 
 ## 📁 Project Structure
 
