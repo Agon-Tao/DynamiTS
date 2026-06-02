@@ -107,7 +107,7 @@ Our model is built on three key ideas:
 ## 🧪 Selector Weight Analysis
 
 <p align="center">
-  <img src="./figures/Weather_512_to_192.png" width="850">
+  <img src="./assets/Weather_512_to_192.png" width="850">
 </p>
 
 The learned selector weights reveal how the model adaptively focuses on different temporal scales for each input sample.
