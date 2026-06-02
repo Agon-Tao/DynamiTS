@@ -171,7 +171,6 @@ This project is inspired by the following excellent repositories:
 - TimesNet
 - Autoformer
 - Informer
-
 ---
 
 ## 📬 Contact
