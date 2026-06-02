@@ -117,8 +117,6 @@ The learned selector weights reveal how the model adaptively focuses on differen
 ## ⚙️ Installation
 
 ```bash
-conda create -n your_model python=3.8
-conda activate your_model
 pip install -r requirements.txt
 ```
 
